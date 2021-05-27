@@ -1,7 +1,23 @@
 @extends('layouts.app')
 @section('content')
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Estadisticas</title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
     
-<div class="container">
+<div class="container-center">
 
   <div class="row">
 
@@ -10,7 +26,7 @@
         <div class="card-header">Total Ventas</div>
         <div class="card-body">
          <h5 class="card-title"><span id="idVendidos">35</span></h5>
-         <p class="card-text">baja en las ventas vs mes anterior</p>
+         <p class="card-text">VENTAS</p>
         </div>
       </div>
     </div>
@@ -20,7 +36,7 @@
        <div class="card-header">Total Almacenado</div>
        <div class="card-body">
          <h5 class="card-title"><span id="idAlmacen">35</span></h5>
-         <p class="card-text">Inventario mayor vs mes anterior</p>
+         <p class="card-text">INVENTARIO</p>
         </div>
       </div>
     </div>
@@ -31,7 +47,7 @@
        <div class="card-header">Total Ingresos</div>
         <div class="card-body">
          <h5 class="card-title"><span id="idIngresos">35</span></h5>
-         <p class="card-text">Ingresos Mayor vs mes anterior</p>
+         <p class="card-text">INGRESOS</p>
         </div>
       </div> 
     </div>
@@ -40,7 +56,9 @@
 
 
 </div>
-<div class="col">
+
+
+<div class="row">
   <div class="main-panel">
     <div class="content">
       <div class="container-fluid">
@@ -51,9 +69,9 @@
                 <div class="ct-chart" id="dailySalesChart"></div>
               </div>
               <div class="card-body">
-                <h4 class="card-title">Ventas diarias</h4>
+                <h4 class="card-title">Ventas</h4>
                 <p class="card-category">
-                  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                  <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> Crecimiento de Ventas</p>
               </div>
             </div>
           </div>
@@ -63,28 +81,28 @@
                 <div class="ct-chart" id="websiteViewsChart"></div>
               </div>
               <div class="card-body">
-                <h4 class="card-title">Email Subscriptions</h4>
-                <p class="card-category">Last Campaign Performance</p>
+                <h4 class="card-title">Almacenado</h4>
+                <p class="card-category">
+                <span class="text-danger"><i class="fa fa-long-arrow-up"></i> 60% </span>Stock Lleno</p>
               </div>
               <div class="card-footer">
                 <div class="stats">
-                  <i class="material-icons">access_time</i> campaign sent 2 days ago
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-8">
             <div class="card card-chart">
-              <div class="card-header card-header-danger">
+              <div class="card-header card-header-info">
                 <div class="ct-chart" id="completedTasksChart"></div>
               </div>
               <div class="card-body">
-                <h4 class="card-title">Completed Tasks</h4>
-                <p class="card-category">Last Campaign Performance</p>
+                <h4 class="card-title">Ingresos</h4>
+                <p class="card-category">
+                <span class="text-success"><i class="fa fa-long-arrow-up"></i> 40% </span> Crecimiento de ingresos</p>
               </div>
               <div class="card-footer">
                 <div class="stats">
-                  <i class="material-icons">access_time</i> campaign sent 2 days ago
                 </div>
               </div>
             </div>
