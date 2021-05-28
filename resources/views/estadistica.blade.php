@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="css/estilo.css">
 </head>
     
-<div class="container-center">
+<div class="container">
+
 
   <div class="row">
 
@@ -25,7 +26,14 @@
       <div class="bg-success text-white text-center m-1">
         <div class="card-header">Total Ventas</div>
         <div class="card-body">
-         <h5 class="card-title"><span id="idVendidos">35</span></h5>
+         <h5 class="card-title"><span id="idVendidos">
+         @foreach($Cantidad as $Cantida)
+        <tbody>
+        <tr>
+        <td>{{ $Cantida->detalle_documento}}</td>
+        </tr>
+        </tbody>
+      @endforeach</span></h5>
          <p class="card-text">VENTAS</p>
         </div>
       </div>
@@ -35,8 +43,14 @@
       <div class="bg-warning text-white text-center m-1">
        <div class="card-header">Total Almacenado</div>
        <div class="card-body">
-         <h5 class="card-title"><span id="idAlmacen">35</span></h5>
-         <p class="card-text">INVENTARIO</p>
+         <h5 class="card-title"><span id="idAlmacen">@foreach($Cantidad as $Cantida)
+        <tbody>
+        <tr>
+        <td>{{ $Cantida->Stock}}</td>
+        </tr>
+        </tbody>
+        @endforeach</span></h5>
+         <p class="card-text">PRODUCTOS</p>
         </div>
       </div>
     </div>
@@ -46,7 +60,14 @@
       <div class="bg-info text-white text-center m-1">
        <div class="card-header">Total Ingresos</div>
         <div class="card-body">
-         <h5 class="card-title"><span id="idIngresos">35</span></h5>
+         <h5 class="card-title"><span id="idIngresos">
+         @foreach($Cantidad as $Cantida)
+         <tbody>
+          <td>${{ $Cantida->Ventas}}</td>
+         </tbody>
+         @endforeach
+         
+         </span></h5>
          <p class="card-text">INGRESOS</p>
         </div>
       </div> 
