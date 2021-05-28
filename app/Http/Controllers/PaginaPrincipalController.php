@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PaginaPrincipalController extends Controller
 {
     public function __invoke(){
-        return view('dashboards.navegacionVertical');
+        return view('estadistica');
     }
 }
